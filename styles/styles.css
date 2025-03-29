@@ -1,0 +1,116 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+  Primary Color: #B03931
+  Primary Shade: #98312A
+
+  Gray: ##F5F5F5
+  Gray border: #CCC
+*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto Slab", sans-serif;
+  color: #333;
+  /* width: 800px; */
+  /* margin: 0 auto; */
+  /* padding: 0 24px; */
+}
+
+header{
+  background-color: #B03931;
+  color: #FFF;
+  display: flex;
+  gap: 128px;
+  padding-left: 96px;
+}
+
+main{
+  width: 800px;
+  margin: 0 auto;
+  /* background-color: bisque; */
+  position: relative;
+}
+
+.master-add-remove-btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 8px 14px;
+  cursor: pointer;
+  background-color: #B03931;
+  color: #FFF;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+}
+
+.test{
+  /* margin-top: 48px; */
+  padding: 24px;
+  padding-top: 48px;
+  /* background-color:bisque; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.test-heading{
+  grid-column: 1/-1;
+  color: #B03931;
+}
+
+.test-heading a:link, .test-heading a:visited{
+  color: #B03931;
+  text-decoration: none;
+}
+
+.test-heading a:hover{
+  text-decoration: underline;
+}
+
+.pr-branch, .master-branch{
+  /* border: 1px solid #CCC; */
+  /* padding: 8px; */
+  border-radius: 8px;
+}
+
+.branch-heading{
+  font-size: 18px;
+  font-weight: 700;
+  color: #B03931;
+  /* border-bottom: #ccc 1px solid; */
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr td{
+  padding: 8px;
+  border: 1px solid #CCC;
+}
+
+.pos-val{
+  color: red;
+}
+
+.neg-val{
+  color: rgb(4, 179, 4);
+}
+
