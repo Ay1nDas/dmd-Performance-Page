@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
-
   <!-- Adding CSS -->
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -21,10 +20,48 @@
   </header>
 
   <main>
-    <button class="master-add-remove-btn">Add/Remove Master Branch</button>
-    <div class="test test1">
+    <canvas id="barChart"></canvas>
+    <div class = "filters">
+    <div class = "data-filter">
+      <div>
+        <label><input type="checkbox" name="items" value="item1" checked> User Time</label>
+        <label><input type="checkbox" name="items" value="item2" checked> System-time</label>
+        <label><input type="checkbox" name="items" value="item3" checked> RAM</label>
+      </div>
+      <button
+      class = "submit-btn"
+      >Submit</button>
+    </div>
+    
+    <div class = "test-filter">
+      <div class="usr-time-test">
+        <p>User Time tests</p>
+        <label><input type="checkbox" name="items" value="item1"> Test #1</label>
+        <label><input type="checkbox" name="items" value="item2"> Test #2</label>
+        <label><input type="checkbox" name="items" value="item3"> Test #3</label>
+      </div>
+      <div class="sys-time-test">
+          <p>System Time tests</p>
+          <label><input type="checkbox" name="items" value="item1"> Test #1</label>
+          <label><input type="checkbox" name="items" value="item2"> Test #2</label>
+        </div>
+        <div class="ram-test">
+          <p>Ram tests</p>
+          <label><input type="checkbox" name="items" value="item1" checked> Test #1</label>
+          <label><input type="checkbox" name="items" value="item2" checked> Test #2</label>
+          <label><input type="checkbox" name="items" value="item3" checked> Test #3</label>
+          <label><input type="checkbox" name="items" value="item3" checked> Test #4</label>
+      </div>
+        <button
+        class = "submit-btn"
+        >Submit</button>
+    </div>
+  </div>
+
+
+    <div class="test test-ram">
       <h2 class = "test-heading">
-        <a href="#">Test #1</a> results of <a href="#">PR #39</a>
+        <a href="#">RAM tests</a> results on <a href="#">PR #39</a>
       </h2>
 
       <div class="pr-branch">
@@ -61,14 +98,9 @@
           <tr>
             <td>Max Memory (Kb)</td>
             <td>319460</td>
-            <td class = "neg-val">-63</td>
+            <td class = "neg-val">-68203</td>
           </tr>
 
-          <tr>
-            <td>Page Size (Kb)</td>
-            <td>4096</td>
-            <td>0</td>
-          </tr>
         </table>
       </div>
 
@@ -76,10 +108,6 @@
       <div class="master-branch">
         <h3 class = "branch-heading">Master Branch</h3>
         <table>
-          <!-- <tr>
-            <th>data-type</th>
-            <th>value</th>
-          </tr> -->
           <tr>
             <td>Pull Request</td>
             <td>#39</td>
@@ -103,109 +131,15 @@
 
           <tr>
             <td>Max Memory (Kb)</td>
-            <td>319528</td>
+            <td>387665</td>
           </tr>
 
-          <tr>
-            <td>Page Size</td>
-            <td>4096</td>
-          </tr>
         </table>
       </div>
-
     </div>
 
-
-    <div class="test test1">
-      <h2 class = "test-heading"><a href="#">Test #2</a> results of <a href="#">PR #39</a></h2>
-
-      <div class="pr-branch">
-        <h3 class = "branch-heading">PR Branch</h3>
-        <table>
-          <!-- <tr>
-            <th>data-type</th>
-            <th>value</th>
-          </tr> -->
-          <tr>
-            <td>Pull Request</td>
-            <td>#39</td>
-            <td></td>
-
-          </tr>
-
-          <tr>
-            <td>User Time (Seconds)</td>
-            <td>7.09</td>
-            <td class = "neg-val">-0.01</td>
-          </tr>
-
-          <tr>
-            <td>System Time (Seconds)</td>
-            <td>0.36</td>
-            <td class = "pos-val">+0.01</td>
-          </tr>
-
-          <tr>
-            <td>CPU Usage</td>
-            <td>99%</td>
-            <td>0%</td>
-          </tr>
-
-          <tr>
-            <td>Max Memory (Kb)</td>
-            <td>319460</td>
-            <td class = "neg-val">-63</td>
-          </tr>
-
-          <tr>
-            <td>Page Size (Kb)</td>
-            <td>4096</td>
-            <td>0</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="master-branch">
-        <h3 class = "branch-heading">Master Branch</h3>
-        <table>
-          <!-- <tr>
-            <th>data-type</th>
-            <th>value</th>
-          </tr> -->
-          <tr>
-            <td>Pull Request</td>
-            <td>#39</td>
-          </tr>
-
-          <tr>
-            <td>User Time (Seconds)</td>
-            <td>7.10</td>
-          </tr>
-
-          <tr>
-            <td>System Time (Seconds)</td>
-            <td>0.35</td>
-          </tr>
-
-          <tr>
-            <td>CPU Usage</td>
-            <td>99%</td>
-          </tr>
-
-          <tr>
-            <td>Max Memory (Kb)</td>
-            <td>319528</td>
-          </tr>
-
-          <tr>
-            <td>Page Size</td>
-            <td>4096</td>
-          </tr>
-        </table>
-      </div>
-
-
-    </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
