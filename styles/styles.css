@@ -14,42 +14,41 @@ FONT SIZE SYSTEM (px)
   Gray border: #CCC
 */
 
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: "Roboto Slab", sans-serif;
+body {
+  font-family: 'Roboto Slab', sans-serif;
   color: #333;
   /* width: 800px; */
   /* margin: 0 auto; */
   /* padding: 0 24px; */
 }
 
-header{
-  background-color: #B03931;
-  color: #FFF;
+header {
+  background-color: #b03931;
+  color: #fff;
   display: flex;
   gap: 128px;
   padding-left: 96px;
 }
 
-main{
+main {
   /* margin: 0 auto; */
   /* background-color: bisque; */
   position: relative;
   display: grid;
   grid-template-columns: 1fr 250px;
-  grid-column-gap:100px;
+  grid-column-gap: 100px;
   /* align-items: center;
    */
-   justify-items: center;
+  justify-items: center;
 }
 
-canvas{
+canvas {
   margin-left: 48px;
   padding: 24px;
   width: 800px !important;
@@ -57,40 +56,40 @@ canvas{
   max-width: 100%;
 }
 
-.filters{
+.filters {
   background-color: #eee;
-  width:300px;
+  width: 300px;
   grid-column: 2;
   grid-row: 1/3;
   padding: 24px;
-  justify-self:self-end ;
+  justify-self: self-end;
 
-  border-left: #B03931 5px solid;
+  border-left: #b03931 5px solid;
 }
 
-.filters label{
+.filters label {
   display: block;
   margin: 8px 0;
 }
 
-.data-filter{
+.data-filter {
   border-bottom: #ccc 1px solid;
   padding-bottom: 8px;
   margin-bottom: 8px;
-  color:#B03931;
+  color: #b03931;
   font-weight: bold;
 }
 
-.test-filter p{
+.test-filter p {
   padding-bottom: 8px;
   margin-bottom: 8px;
-  color:#B03931;
+  color: #b03931;
   font-weight: bold;
 }
 
-.submit-btn{
-  background-color: #B03931;
-  color: #FFF;
+.submit-btn {
+  background-color: #b03931;
+  color: #fff;
   width: 100%;
   padding: 8px 16px;
   border-radius: 8px;
@@ -98,7 +97,7 @@ canvas{
   cursor: pointer;
 }
 
-.test{
+.test {
   /* margin-top: 48px; */
   padding: 24px;
   margin-left: 48px;
@@ -108,49 +107,51 @@ canvas{
   /* gap: 24px; */
 }
 
-.test-heading{
+.test-heading {
   grid-column: 1/-1;
-  color: #B03931;
+  color: #b03931;
 }
 
-.test-heading a:link, .test-heading a:visited{
-  color: #B03931;
+.test-heading a:link,
+.test-heading a:visited {
+  color: #b03931;
   text-decoration: none;
 }
 
-.test-heading a:hover{
+.test-heading a:hover {
   text-decoration: underline;
 }
 
-.pr-branch, .master-branch{
+.pr-branch,
+.master-branch {
   /* border: 1px solid #CCC; */
   /* padding: 8px; */
   border-radius: 8px;
 }
 
-table th{
+table th {
   font-size: 18px;
   font-weight: 700;
-  color: #B03931;
+  color: #b03931;
   /* border-bottom: #ccc 1px solid; */
 }
 
-table{
+table {
   width: 750px;
   border-collapse: collapse;
 }
 
-table td, table th{
+table td,
+table th {
   text-align: left;
   padding: 8px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 
-.pos-val{
+.neg-val {
   color: red;
 }
 
-.neg-val{
+.pos-val {
   color: rgb(4, 179, 4);
 }
-

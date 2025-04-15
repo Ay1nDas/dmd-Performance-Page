@@ -1,113 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D language Performance Test results</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D language Performance Test results</title>
 
-  <!-- Adding Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Adding Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Adding CSS -->
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <header>
-    <img src="icons/dlogo.svg" alt="D Language Logo" width="200">
-    <h1>D Language PR Results</h1>
-  </header>
+    <!-- Adding CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/dlogo.svg" alt="D Language Logo" width="200" />
+      <h1>D Language PR Results</h1>
+    </header>
 
-  <main>
-    <canvas id="barChart"></canvas>
-    <div class = "filters">
-    <div class = "data-filter">
-      <div>
-        <label><input type="checkbox" name="items" value="item1" checked> User Time</label>
-        <label><input type="checkbox" name="items" value="item2" checked> System-time</label>
-        <label><input type="checkbox" name="items" value="item3" checked> RAM</label>
-      </div>
-      <button
-      class = "submit-btn"
-      >Submit</button>
-    </div>
-    
-    <div class = "test-filter">
-      <div class="usr-time-test">
-        <p>User Time tests</p>
-        <label><input type="checkbox" name="items" value="item1"> Test #1</label>
-        <label><input type="checkbox" name="items" value="item2"> Test #2</label>
-        <label><input type="checkbox" name="items" value="item3"> Test #3</label>
-      </div>
-      <div class="sys-time-test">
-          <p>System Time tests</p>
-          <label><input type="checkbox" name="items" value="item1"> Test #1</label>
-          <label><input type="checkbox" name="items" value="item2"> Test #2</label>
+    <main>
+      <canvas id="bidirectionalChart"></canvas>
+      <div class="filters">
+        <div class="data-filter">
+          <div>
+            <label
+              ><input type="checkbox" name="items" value="item1" checked /> User
+              Time</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item2" checked />
+              System-time</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item3" checked />
+              RAM</label
+            >
+          </div>
+          <button class="submit-btn">Submit</button>
         </div>
-        <div class="ram-test">
-          <p>Ram tests</p>
-          <label><input type="checkbox" name="items" value="item1" checked> Test #1</label>
-          <label><input type="checkbox" name="items" value="item2" checked> Test #2</label>
-          <label><input type="checkbox" name="items" value="item3" checked> Test #3</label>
-          <label><input type="checkbox" name="items" value="item3" checked> Test #4</label>
-      </div>
-        <button
-        class = "submit-btn"
-        >Submit</button>
-    </div>
-  </div>
 
-
-    <div class="test test-ram">
-      <h2 class = "test-heading">
-        Detailed Test results on <a href="#">PR #39</a>
-      </h2>
-
-      <div class="pr-branch">
-        <table>
-          <tr>
-            <th>Branch</th>
-            <th>master</th>
-            <th>PR</th>
-            <th>delta</th>
-          </tr>
-
-          <tr>
-            <td>User Time (Seconds)</td>
-            <td>7.10</td>
-            <td>7.09</td>
-            <td class = "neg-val">-0.01</td>
-          </tr>
-
-          <tr>
-            <td>System Time (Seconds)</td>
-            <td>0.35</td>
-            <td>0.36</td>
-            <td class = "pos-val">+0.01</td>
-          </tr>
-
-          <tr>
-            <td>CPU Usage</td>
-            <td>99%</td>
-            <td>99%</td>
-            <td>0%</td>
-          </tr>
-
-          <tr>
-            <td>Max Memory (Kb)</td>
-            <td>387665</td>
-            <td>319460</td>
-            <td class = "neg-val">-68203</td>
-          </tr>
-
-        </table>
+        <div class="test-filter js-test-filter">
+          <div class="usr-time-test">
+            <p>User Time tests</p>
+            <label
+              ><input type="checkbox" name="items" value="item1" /> Test
+              #1</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item2" /> Test
+              #2</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item3" /> Test
+              #3</label
+            >
+          </div>
+          <div class="sys-time-test">
+            <p>System Time tests</p>
+            <label
+              ><input type="checkbox" name="items" value="item1" /> Test
+              #1</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item2" /> Test
+              #2</label
+            >
+          </div>
+          <div class="ram-test">
+            <p>Ram tests</p>
+            <label
+              ><input type="checkbox" name="items" value="item1" checked /> Test
+              #1</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item2" checked /> Test
+              #2</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item3" checked /> Test
+              #3</label
+            >
+            <label
+              ><input type="checkbox" name="items" value="item3" checked /> Test
+              #4</label
+            >
+          </div>
+          <button class="submit-btn">Submit</button>
+        </div>
       </div>
 
-    </div>
+      <div class="test">
+        <h2 class="test-heading">
+          Detailed Test results on <a href="#">PR #39</a>
+        </h2>
 
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="scripts/script.js"></script>
-</body>
+        <div class="js-test-table">
+          <table>
+            <tr>
+              <th>Branch</th>
+              <th>master</th>
+              <th>PR</th>
+              <th>delta</th>
+            </tr>
+
+            <tr>
+              <td>User Time (Seconds)</td>
+              <td>7.10</td>
+              <td>7.09</td>
+              <td class="neg-val">-0.01</td>
+            </tr>
+
+            <tr>
+              <td>System Time (Seconds)</td>
+              <td>0.35</td>
+              <td>0.36</td>
+              <td class="pos-val">+0.01</td>
+            </tr>
+
+            <tr>
+              <td>CPU Usage</td>
+              <td>99%</td>
+              <td>99%</td>
+              <td>0%</td>
+            </tr>
+
+            <tr>
+              <td>Max Memory (Kb)</td>
+              <td>387665</td>
+              <td>319460</td>
+              <td class="neg-val">-68203</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
 </html>
